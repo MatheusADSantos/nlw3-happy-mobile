@@ -1,0 +1,3 @@
+declare module "*.png"; 
+//I`m saying that all archive with extension .png is a module
+//In other words, I'm saying, archives from type png, I can import...
