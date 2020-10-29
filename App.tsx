@@ -5,6 +5,8 @@ import { Nunito_600SemiBold, Nunito_700Bold, Nunito_800ExtraBold } from '@expo-g
 
 import Routes from './src/routes';
 
+console.disableYellowBox = true;
+
 export default function App() {
   const [fontsLoaded] = useFonts({
     Nunito_600SemiBold,
