@@ -1,29 +1,42 @@
 {
-  "expo": {
-    "name": "mobile",
-    "slug": "mobile",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "android": {
-      "package": "br.com.happy.MatheusADSantos"
+    "expo": {
+        "name": "mobile",
+        "slug": "mobile",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "icon": "./assets/icon.png",
+        "splash": {
+            "image": "./assets/splash.png",
+            "resizeMode": "contain",
+            "backgroundColor": "#ffffff"
+        },
+        "updates": {
+            "fallbackToCacheTimeout": 0
+        },
+        "assetBundlePatterns": [
+            "**/*"
+        ],
+        "ios": {
+            "supportsTablet": true,
+            "bundleIdentifier": "no"
+        },
+        "web": {
+            "favicon": "./assets/favicon.png"
+        },
+        "android": {
+            "package": "br.com.happy.matheusadsantos",
+            "versionCode": 1.0,
+            "permissions": [
+                "ACCESS_COARSE_LOCATION",
+                "ACCESS_BACKGROUND_LOCATION",
+                "ACCESS_FINE_LOCATION"
+            ],
+            "config": {
+                "googleMaps": {
+                    "apiKey": "AIzaSyC0wsYEWdEr7PByBHzu7grhD8B0B2dvNIQ"
+                }
+            }
+        },
+        "entryPoint": "node_modules/expo/AppEntry.js"
     }
-  }
 }

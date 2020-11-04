@@ -1,13 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { useFonts } from 'expo-font';
 import { Nunito_600SemiBold, Nunito_700Bold, Nunito_800ExtraBold } from '@expo-google-fonts/nunito';
 
 import Routes from './src/routes';
 
-console.disableYellowBox = true;
+import Updates from 'expo-updates';
+
+// console.disableYellowBox = true;
 
 export default function App() {
+
+  useEffect(() => {
+    async function updateApp() {
+      const { isAvailable } = await Updates.checkForUpdateAsync()
+
+      if (isAvailable) {
+        await Updates.fetchUpdateAsync()
+        await Updates.reloadAsync()
+      }
+
+    }
+
+    updateApp();
+  }, []);
+
   const [fontsLoaded] = useFonts({
     Nunito_600SemiBold,
     Nunito_700Bold,

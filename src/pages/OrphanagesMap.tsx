@@ -47,7 +47,7 @@ export default function OrphanagesMap() {
       >
 
         {orphanages.map(orphanage => {
-          return(
+          return (
             <Marker
               key={orphanage.id}
               icon={mapMarker}
